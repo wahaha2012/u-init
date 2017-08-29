@@ -1,21 +1,21 @@
-easy-init
+u-init
 =========
 
-create vue/react/normal initialize config, make it easy to start your project.
+quick init project.
 
 # install #
 
 ```bash
-$ npm install easy-init -g
+$ npm install u-init -g
 ```
 
 # initialize your project #
 
 ```bash
 # create new project and directory
-$ easy-init your-project-directory-name
+$ u-init your-project-directory-name
 
 # create new project in existing directory
 $ cd your-project-directory
-$ easy-init
+$ u-init
 ```
