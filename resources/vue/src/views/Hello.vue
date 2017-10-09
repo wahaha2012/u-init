@@ -10,7 +10,7 @@
       <br>
       <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
     </ul>
-    <h2>Ecosystem</h2>
+    <h2 @click="loginTest">Ecosystem</h2>
     <ul>
       <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
@@ -22,7 +22,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import { getTitle } from '../api';
+import { getTitle, userLogin } from '../api';
 
 export default {
   name: 'hello',
@@ -46,6 +46,13 @@ export default {
     }),
     requestTitle() {
       getTitle({ name: 'tome' }).then((response) => {
+        console.log(response);
+      }).catch((error) => {
+        console.warn(error);
+      });
+    },
+    loginTest() {
+      userLogin({ name: 'tome' }).then((response) => {
         console.log(response);
       }).catch((error) => {
         console.warn(error);

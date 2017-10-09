@@ -11,6 +11,11 @@ var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 var env = config.build.env
 
+if (process.env.beta === 'beta') {
+  console.log('Build for QA test');
+  env = config.beta.env;
+}
+
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({

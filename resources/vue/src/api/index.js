@@ -1,6 +1,7 @@
-import Request from 'axios';
+import { get, post } from './request';
 import * as Api from './config';
+// import { removeEmptyParams } from '../utils';
 
-export const getTitle = params => Request.get(Api.getTitle, { params });
+export const getTitle = data => get(Api.getTitle, data);
 
-export default {};
+export const userLogin = data => post(Api.base, data);
